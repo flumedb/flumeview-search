@@ -36,7 +36,7 @@ module.exports = function (version, length, map) {
         while(aborts.length) aborts.shift()()
       })
 
-      var terms = opts.query.trim().split(/[^\w]+/)
+      var terms = opts.query.trim().split(/[^\w]+/).filter(Boolean)
       var mask = 0, found = {}, ended = 0
       var aborts = terms.filter(function (e) {
         return e.length >= 3
@@ -70,5 +70,6 @@ module.exports = function (version, length, map) {
     return index
   }
 }
+
 
 

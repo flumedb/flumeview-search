@@ -8,6 +8,10 @@
     "url": "git://github.com/dominictarr/flumeview-search.git"
   },
   "dependencies": {
+    "flumeview-level": "^2.1.1",
+    "pull-paramap": "^1.2.2",
+    "pull-pushable": "^2.2.0",
+    "pull-stream": "^3.0.1"
   },
   "devDependencies": {
   },
@@ -17,3 +21,4 @@
   "author": "'Dominic Tarr' <dominic.tarr@gmail.com> (dominictarr.com)",
   "license": "MIT"  
 }
+

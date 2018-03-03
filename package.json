@@ -1,7 +1,7 @@
 {
   "name": "flumeview-search",
   "description": "",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/dominictarr/flumeview-search",
   "repository": {
     "type": "git",
@@ -13,12 +13,10 @@
     "pull-pushable": "^2.2.0",
     "pull-stream": "^3.0.1"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "set -e; for t in test/*.js; do node $t; done"
   },
   "author": "'Dominic Tarr' <dominic.tarr@gmail.com> (dominictarr.com)",
-  "license": "MIT"  
+  "license": "MIT"
 }
-

@@ -36,11 +36,12 @@ module.exports = function (version, length, map) {
         while(aborts.length) aborts.shift()()
       })
 
-      var terms = opts.query.trim().split(/[^\w]+/).filter(Boolean)
-      var mask = 0, found = {}, ended = 0
-      var aborts = terms.filter(function (e) {
+      var terms = opts.query.trim().split(/[^\w]+/).filter(Boolean).filter(function (e) {
         return e.length >= 3
-      }).map(function (term, i) {
+      })
+      
+      var mask = 0, found = {}, ended = 0
+      var aborts = terms.map(function (term, i) {
         mask |= 1 << i
         var sink
         pull(

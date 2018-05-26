@@ -15,7 +15,7 @@ module.exports = function (version, length, map) {
     if(text) {
       for(var word; word = match.exec(text); ) {
         word = word[0]
-        if(word && word.length >= 3 && !words[word]) words[word] = true
+        if(word && word.length >= length && !words[word]) words[word] = true
       }
       return Object.keys(words).sort().map(function (e) {
         return [e.toLowerCase(), -seq]
@@ -37,9 +37,8 @@ module.exports = function (version, length, map) {
       })
 
       var terms = opts.query.trim().split(/[^\w]+/).filter(Boolean).filter(function (e) {
-        return e.length >= 3
+        return e.length >= length
       })
-      
       var mask = 0, found = {}, ended = 0
       var aborts = terms.map(function (term, i) {
         mask |= 1 << i
@@ -71,6 +70,4 @@ module.exports = function (version, length, map) {
     return index
   }
 }
-
-
 

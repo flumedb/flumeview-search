@@ -13,12 +13,13 @@ var OffsetLog = require('flumelog-offset')
 var minLength = 3 //index words at least this long
 
 var db = Flume(OffsetLog('/tmp/flume-search-example'))
+
   .use('search', FlumeViewSearch(1, minLength, function (doc) {
     return doc.text //return the string you want indexed
   })
 
 pull(
-  flumeDB.search({query: 'foo bar baz', limit: 10}),
+  db.search.query({query: 'foo bar baz', limit: 10}),
   pull.drain(console.log)
 )
 ```
@@ -46,4 +47,6 @@ The order is in reverse chronological order.
 ## License
 
 MIT
+
+
 

@@ -8,7 +8,7 @@
     "url": "git://github.com/dominictarr/flumeview-search.git"
   },
   "dependencies": {
-    "flumeview-level": "^3.0.5",
+    "flumeview-level": "^3.0.14",
     "pull-paramap": "^1.2.2",
     "pull-pushable": "^2.2.0",
     "pull-stream": "^3.0.1"
